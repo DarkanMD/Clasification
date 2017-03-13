@@ -5,34 +5,25 @@ using System.Text;
 
 namespace Clasification
 {
-    public class ShopingCart
+    public class Catalog
     {
-        private int cartID;
-        private List<CartItem> cartItems;
-        private decimal cartTotal;
-        private DateTime cartCreationDate;
 
-        public void Validate()
+        public void ViewCatalog()
         {
             throw new System.NotImplementedException();
         }
 
-        public void Create()
+        public void SerchCatalog()
         {
             throw new System.NotImplementedException();
         }
 
-        public void Cancel()
+        public void AddProduct()
         {
             throw new System.NotImplementedException();
         }
 
-        public void Remove()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public void Add()
+        public void RemoveProduct()
         {
             throw new System.NotImplementedException();
         }

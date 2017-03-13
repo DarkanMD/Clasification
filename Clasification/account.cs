@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Clasification
 {
-    public class Customer : User
+    public class Account
     {
     }
 }

@@ -2,15 +2,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Clasification
 {
-    enum UserType { user, admin }
-    class Program
+    public class Guest
     {
-        static void Main(string[] args)
+
+        public void Register()
         {
+            throw new System.NotImplementedException();
         }
     }
 }

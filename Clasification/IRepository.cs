@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 
 namespace Clasification
 {
-    enum UserType { user, admin }
-    class Program
+    public interface IRepository<T, in TKey> where T : class
     {
-        static void Main(string[] args)
-        {
-        }
+        T Get(TKey id);
+        void Save(T entity);
+        void Delete(T entity);
     }
 }

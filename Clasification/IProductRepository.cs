@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace Clasification
 {
-    enum UserType { user, admin }
-    class Program
+    interface IProductRepository:IRepository<Product, string>
     {
-        static void Main(string[] args)
-        {
-        }
+            IEnumerable<Product> FindAll();
+            IEnumerable<Product> Find(string text);
     }
 }

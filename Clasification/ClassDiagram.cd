@@ -3,43 +3,87 @@
   <Class Name="Clasification.User">
     <Position X="0.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AgAAABAAAAAAAAAACAAAAAAAAAAAIAAAAAgAAAFAAAg=</HashCode>
       <FileName>User.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Clasification.Administrator">
-    <Position X="2.5" Y="0.5" Width="1.5" />
+    <Position X="2.75" Y="1" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Administrator.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Clasification.Customer">
-    <Position X="2.5" Y="1.5" Width="1.5" />
+  <Class Name="Clasification.RegistredUser">
+    <Position X="2.5" Y="3.75" Width="1.5" />
+    <InheritanceLine Type="Clasification.User" FixedToPoint="true">
+      <Path>
+        <Point X="1.25" Y="2.849" />
+        <Point X="1.25" Y="3.375" />
+        <Point X="2.875" Y="3.375" />
+        <Point X="2.875" Y="3.75" />
+      </Path>
+    </InheritanceLine>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Customer.cs</FileName>
+      <FileName>RegistredUser.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Clasification.UnregistredUser">
-    <Position X="2.5" Y="2.5" Width="1.5" />
+  <Class Name="Clasification.Guest">
+    <Position X="0.5" Y="4.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>UnregistredUser.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Clasification.ShopingCart">
-    <Position X="4.5" Y="0.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>ShopingCart.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Guest.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Clasification.Order">
-    <Position X="6.5" Y="0.5" Width="1.5" />
+    <Position X="7.75" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAgAAAQAA=</HashCode>
+      <FileName>Order.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Clasification.Product">
+    <Position X="9.75" Y="2.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAAAAAAASAAAAAAACAAAAAAgAAIgCA=</HashCode>
+      <FileName>Product.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Clasification.CartItem">
+    <Position X="7.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAgAAAAAAAAAAAQAAAAAAAACAAAAAAAAAAAA=</HashCode>
+      <FileName>CartItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Clasification.MyRepository">
+    <Position X="4.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IQAAQQAgAAAAAAAAAAAIAAAAAQAAAgAkAAAABAAAAAA=</HashCode>
+      <FileName>MyRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Clasification.ShopingCart">
+    <Position X="4.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAKIACAAQACAAAAAAAAABAAAAAAAAEAAgAAAAAAAAAA=</HashCode>
+      <FileName>ShopingCart.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Clasification.Catalog">
+    <Position X="7.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAAAAAIQAAAAAAAAAAAAAAAAAACAAA=</HashCode>
+      <FileName>Catalog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Clasification.Account">
+    <Position X="4.5" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Order.cs</FileName>
+      <FileName>account.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Tahoma" Size="8.25" />
