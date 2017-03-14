@@ -11,6 +11,23 @@ namespace Clasification
     {
         static void Main(string[] args)
         {
+            Product p = new Product() { ProductID = 1, ProductName = "La La La" };
+            Product p1 = new Product() { ProductID = 2, ProductName = "Opa" };
+            Product p2 = new Product() { ProductID = 3, ProductName = "Lu La La" }; ;
+
+            MyRepository db = new MyRepository();
+            db.Add(p);
+            db.Add(p1);
+            db.Add(p2);
+            db.Remove(3);
+
+            var temp = db.Search("La");
+            foreach (var item in temp)
+            {
+                Console.WriteLine(item);
+            }
+            db.Remove(3);
+            
         }
     }
 }

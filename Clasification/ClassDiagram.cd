@@ -38,7 +38,7 @@
   <Class Name="Clasification.Product">
     <Position X="9.75" Y="2.75" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAEAAAAAAAAAAAAAAAAAASAAAAAAACAAAAAAgAAIgCA=</HashCode>
+      <HashCode>EAEBAAAAAAAAAAAEAAAAgSABAAAAACAAAAAAgAAIgCA=</HashCode>
       <FileName>Product.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -55,7 +55,6 @@
       <HashCode>AAIAAAAAAAAAAABAAAAABAAAAAAAAAAAAoAAAAAgAAA=</HashCode>
       <FileName>MyRepository.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" />
   </Class>
   <Class Name="Clasification.ShopingCart">
     <Position X="4.75" Y="0.5" Width="1.5" />

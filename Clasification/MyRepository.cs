@@ -6,34 +6,40 @@ using System.Text;
 
 namespace Clasification
 {
-    public class MyRepository: IProductRepository
+    public class MyRepository
     {
-        private readonly List <Product> _products = new List<Product>();
+        public List <Product> _products = new List<Product>();
 
-
-        public void Search()
+        public List<Product> Search(string parameter)
         {
-            throw new System.NotImplementedException();
+            return _products.Where(x => x.ProductName.Contains(parameter)).ToList();
         }
 
-        public void Add()
+        public void Add(Product p)
         {
-            throw new System.NotImplementedException();
+            _products.Add(p);
         }
 
-        public void Get()
+        public Product Get(int id)
         {
-            throw new System.NotImplementedException();
+            foreach (var item in _products)
+            {
+                if (item.ProductID == id)
+                {
+                    return item;
+                }
+            }
+            throw new Exception("Item not found");
         }
 
-        public void GetAll()
+        public List<Product> GetAll()
         {
-            throw new System.NotImplementedException();
+            return _products;
         }
 
-        public void Remove()
+        public void Remove(int id)
         {
-            throw new System.NotImplementedException();
+            _products = _products.Where(x => x.ProductID != id).ToList();
         }
     }
 }
