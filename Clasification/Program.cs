@@ -19,14 +19,9 @@ namespace Clasification
             db.Add(p);
             db.Add(p1);
             db.Add(p2);
-            db.Remove(3);
+            Console.WriteLine(db.G);
 
-            var temp = db.Search("La");
-            foreach (var item in temp)
-            {
-                Console.WriteLine(item);
-            }
-            db.Remove(3);
+
             
         }
     }

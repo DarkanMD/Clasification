@@ -9,37 +9,57 @@ namespace Clasification
     public class MyRepository
     {
         public List <Product> _products = new List<Product>();
+        public List <User> _users = new List<User>();
 
-        public List<Product> Search(string parameter)
+
+    public List<Product> SearchProduct(string parameter)
         {
             return _products.Where(x => x.ProductName.Contains(parameter)).ToList();
         }
 
-        public void Add(Product p)
+        public List<User> SearchUser(string parameter)
         {
-            _products.Add(p);
+            return _users.Where(x => x.UserName.Contains(parameter)).ToList();
         }
 
-        public Product Get(int id)
+        public void Add(Product product)
         {
-            foreach (var item in _products)
-            {
-                if (item.ProductID == id)
-                {
-                    return item;
-                }
-            }
-            throw new Exception("Item not found");
+            _products.Add(product);
         }
 
-        public List<Product> GetAll()
+        public void Add(User user)
+        {
+            _users.Add(user);
+        }
+
+        public Product GetProduct(int id)
+        {
+            return _products.FirstOrDefault(x => x.ProductID == id);
+        }
+
+        public User GetUser(int id)
+        {
+            return _users.FirstOrDefault(x => x.UserID == id);
+        }
+
+        public List<Product> GetAllProducts()
         {
             return _products;
         }
 
-        public void Remove(int id)
+        public List<User> GetAllUsers()
+        {
+            return _users;
+        }
+
+        public void RemoveProduct(int id)
         {
             _products = _products.Where(x => x.ProductID != id).ToList();
+        }
+
+        public void RemoveUser(int id)
+        {
+            _users = _users.Where(x => x.UserID != id).ToList();
         }
     }
 }
