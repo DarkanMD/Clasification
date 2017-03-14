@@ -8,60 +8,30 @@ namespace Clasification
 {
     public class MyRepository: IProductRepository
     {
-        private readonly List <Product> products = new List<Product>();
-
-        public MyRepository()
-        {
-
-        }
+        private readonly List <Product> _products = new List<Product>();
 
 
-        public void AddProducts()
+        public void Search()
         {
             throw new System.NotImplementedException();
         }
 
-        public void RemoveItem()
+        public void Add()
         {
             throw new System.NotImplementedException();
         }
 
-        public void UpdateItem()
+        public void Get()
         {
             throw new System.NotImplementedException();
         }
 
-        public void AddUser()
+        public void GetAll()
         {
             throw new System.NotImplementedException();
         }
 
-        public void UpdateUser()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public void AddOrder()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public void UpdateOrder()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public void GetItems()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public void GetOrders()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public void GetUsers()
+        public void Remove()
         {
             throw new System.NotImplementedException();
         }

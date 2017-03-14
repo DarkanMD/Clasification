@@ -7,10 +7,10 @@ namespace Clasification
 {
     public class ShopingCart
     {
-        private int cartID;
-        private List<CartItem> cartItems;
-        private decimal cartTotal;
-        private DateTime cartCreationDate;
+        private int _cartID;
+        private List<CartProduct> _cartProducts;
+        private decimal _cartTotal;
+        private DateTime _cartCreationDate;
 
         public void Validate()
         {

@@ -50,7 +50,7 @@
     <Compile Include="IProductRepository.cs" />
     <Compile Include="IRepository.cs" />
     <Compile Include="RegistredUser.cs" />
-    <Compile Include="CartItem.cs" />
+    <Compile Include="CartProduct.cs" />
     <Compile Include="MyRepository.cs" />
     <Compile Include="Order.cs" />
     <Compile Include="Product.cs" />

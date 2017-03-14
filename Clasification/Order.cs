@@ -7,9 +7,9 @@ namespace Clasification
 {
     public class Order
     {
-        private int orderID;
-        private string orderShippingAdress;
-        private DateTime orderDueDate;
-        private string orderShipingDetails;
+        private int _orderID;
+        private string _orderShippingAdress;
+        private DateTime _orderDueDate;
+        private string _orderShipingDetails;
     }
 }

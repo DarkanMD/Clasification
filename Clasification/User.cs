@@ -7,16 +7,16 @@ namespace Clasification
 {
     public class User
     {
-        private string userAddres;
+        private string _userAddres;
 
-        private string userEmail;
+        private string _userEmail;
 
-        private int userID;
+        private int _userID;
 
-        private string userName;
+        private string _userName;
 
-        private string userPassword;
-        private string userType;
+        private string _userPassword;
+        private string _userType;
 
         public void BanUser()
         {

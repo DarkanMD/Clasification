@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="Clasification.User">
-    <Position X="0.5" Y="0.5" Width="1.5" />
+    <Position X="0.5" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AgAAABAAAAAAAAAACAAAAAAAAAAAIAAAAAgAAAFAAAg=</HashCode>
+      <HashCode>AAAAABAAAAIAAAAAAAAAAAgAAAgAIAAAAAIAAAEAAAA=</HashCode>
       <FileName>User.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -15,15 +15,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Clasification.RegistredUser">
-    <Position X="2.5" Y="3.75" Width="1.5" />
-    <InheritanceLine Type="Clasification.User" FixedToPoint="true">
-      <Path>
-        <Point X="1.25" Y="2.849" />
-        <Point X="1.25" Y="3.375" />
-        <Point X="2.875" Y="3.375" />
-        <Point X="2.875" Y="3.75" />
-      </Path>
-    </InheritanceLine>
+    <Position X="2.75" Y="2.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>RegistredUser.cs</FileName>
@@ -37,9 +29,9 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Clasification.Order">
-    <Position X="7.75" Y="0.5" Width="2" />
+    <Position X="7.25" Y="0.5" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAgAAAQAA=</HashCode>
+      <HashCode>AAAAAIAAAAAAAABAAAAAAEAAAAAAQAAAAAAAAAAAAAA=</HashCode>
       <FileName>Order.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -50,17 +42,17 @@
       <FileName>Product.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Clasification.CartItem">
+  <Class Name="Clasification.CartProduct">
     <Position X="7.25" Y="4.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAQAAgAAAAAAAAAAAQAAAAAAAACAAAAAAAAAAAA=</HashCode>
-      <FileName>CartItem.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAABAAAAAQAAAAgAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>CartProduct.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Clasification.MyRepository">
     <Position X="4.75" Y="4.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>IQAAQQAgAAAAAAAAAAAIAAAAAQAAAgAkAAAABAAAAAA=</HashCode>
+      <HashCode>AAIAAAAAAAAAAABAAAAABAAAAAAAAAAAAoAAAAAgAAA=</HashCode>
       <FileName>MyRepository.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -68,7 +60,7 @@
   <Class Name="Clasification.ShopingCart">
     <Position X="4.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAKIACAAQACAAAAAAAAABAAAAAAAAEAAgAAAAAAAAAA=</HashCode>
+      <HashCode>AAIAAAAAQACAAAAAAAAABAAAAgAAAEAAAAAAAAAABAA=</HashCode>
       <FileName>ShopingCart.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -80,7 +72,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Clasification.Account">
-    <Position X="4.5" Y="3.25" Width="1.5" />
+    <Position X="4.75" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>account.cs</FileName>

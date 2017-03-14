@@ -5,11 +5,11 @@ using System.Text;
 
 namespace Clasification
 {
-    public class CartItem
+    public class CartProduct
     {
-        private int quantity;
-        private Product product;
-        private decimal subtotal;
+        private int _quantity;
+        private Product _product;
+        private decimal _subtotal;
 
         public void Display()
         {
