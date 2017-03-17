@@ -1,6 +1,9 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Runtime.Serialization.Json;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -85,6 +88,13 @@ namespace Clasification
             Console.WriteLine("Quantifiers Contains");
             Console.WriteLine(db.GetAllUsers().Any(x=>x.UserName.ToUpper() =="Vasea".ToUpper()));
 
+
+            Product forSerial = new Product(10, 123, 10, "Camera 2Mpx", "Camera", true);
+
+
+
+
+         //   Console.WriteLine(deserialized.ToString());
 
         }
 

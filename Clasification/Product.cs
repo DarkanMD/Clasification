@@ -2,18 +2,39 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Runtime.Serialization;
 
 namespace Clasification
 {
+   // [DataContract]
     public class Product
     {
+       // [DataMember]
         private int _productID;
+      //  [DataMember]
         private decimal _productPrice;
+      //  [DataMember]
         private int _stock;
+      //  [DataMember]
         private string _productName="";
+      //  [DataMember]
         private string _productType="";
+       // [DataMember]
         private bool _visible = false;
+        public Product()
+        {
 
+        }
+        public Product(int id,decimal price,int stock,string name,string type,bool visible)
+        {
+            _productID = id;
+            _productPrice = price;
+            _stock = stock;
+            _productName = name;
+            _productType = type;
+            _visible = visible;
+
+    }
         public Product(int id, string name, decimal price, string type)
         {
             _productID = id;
@@ -29,11 +50,6 @@ namespace Clasification
             {
                 return _productName;
             }
-
-            set
-            {
-                _productName = value;
-            }
         }
 
         public int ProductID
@@ -41,11 +57,6 @@ namespace Clasification
             get
             {
                 return _productID;
-            }
-
-            set
-            {
-                _productID = value;
             }
         }
 
@@ -56,10 +67,6 @@ namespace Clasification
                 return _productPrice;
             }
 
-            set
-            {
-                _productPrice = value;
-            }
         }
 
         public int Stock
@@ -67,11 +74,6 @@ namespace Clasification
             get
             {
                 return _stock;
-            }
-
-            set
-            {
-                _stock = value;
             }
         }
 
@@ -82,15 +84,18 @@ namespace Clasification
                 return _productType;
             }
 
-            set
-            {
-                _productType = value;
-            }
+
         }
 
         public override string ToString()
         {
             return "ProductName = " + ProductName + ", ID = " + ProductID;
         }
+
+        public string ToSerial()
+        {
+            return _productID + "," + _productPrice + "," + _stock + "," + _productName + "," + _productType + "," + _visible;
+        }
+
     }
 }
