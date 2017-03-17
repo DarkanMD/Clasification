@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Clasification
 {
-    public class Administrator : User
+    public class Administrator
     {
     }
 }

@@ -3,7 +3,7 @@
   <Class Name="Clasification.User">
     <Position X="0.5" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAABAAAAIAAAAAAAAAAAgAAAgAKAAAAUIBCAMAAAA=</HashCode>
+      <HashCode>AAAAABAAAAIAAAAAAAAAAAgAAAgAIAAAAUIBCAIAAAA=</HashCode>
       <FileName>User.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -17,50 +17,36 @@
   <Class Name="Clasification.Order">
     <Position X="7.25" Y="0.5" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAAAIAAAAAAAABAAAAAAEAAAAAAQAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AABAAJAAAAACAABAAAAAAEgAAAgAQAAAAAAAAAAAAEA=</HashCode>
       <FileName>Order.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Clasification.Product">
     <Position X="10" Y="2.5" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>EAEBAAAAAAAAAAAEAAAAgSABAAAAACAAAAAAgAAIgCA=</HashCode>
+      <HashCode>FAEAAAAQAAAAAAAEAAAAgAAAgAABACAAAAAAgAAIACA=</HashCode>
       <FileName>Product.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Clasification.CartProduct">
-    <Position X="7" Y="5.25" Width="1.5" />
+    <Position X="5.5" Y="4.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAABAAAAAQAAAAgAAAAAAIAAAAAAAAA=</HashCode>
+      <HashCode>AAACAAAAAAAEAAAFAAAAAAAAAAgAAAAAAIAAgAAAAAA=</HashCode>
       <FileName>CartProduct.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Clasification.MyRepository">
     <Position X="2.75" Y="4.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAMAAAAAAAAAAAAAIAAIAQAgAAAAAIAAEIAACAEAAAA=</HashCode>
+      <HashCode>AAMAAAAAAAEAAAAAIAAIAQAgAAAAAIAAEYAACAEAAAg=</HashCode>
       <FileName>MyRepository.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Clasification.ShopingCart">
-    <Position X="5" Y="0.5" Width="1.5" />
+    <Position X="2.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAIAAAAAQACAAAAAAAAABAAAAgAAAEAAAAAAAAAABAA=</HashCode>
+      <HashCode>AAIAAIAAQACAAAAEAEAABAAAAggAAEAAAAAAAAAADAA=</HashCode>
       <FileName>ShopingCart.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Clasification.Catalog">
-    <Position X="7" Y="3.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAQAAAAAAAAAAAAAAAIQAAAAAAAAAAAAAAAAAACAAA=</HashCode>
-      <FileName>Catalog.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Clasification.Account">
-    <Position X="5" Y="3.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>account.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Tahoma" Size="8.25" />

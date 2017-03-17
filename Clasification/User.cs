@@ -8,17 +8,17 @@ namespace Clasification
     public class User
     {
         private string _userAddres;
-
         private string _userEmail;
-
         private int _userID;
-
         private string _userName;
-
         private string _userPassword;
-        private string _userType;
         private int _role;
 
+        public User(int id, string name)
+        {
+            UserID = id;
+            UserName = name;
+        }
         public string UserAddres
         {
             get
@@ -81,19 +81,6 @@ namespace Clasification
             set
             {
                 _userPassword = value;
-            }
-        }
-
-        public string UserType
-        {
-            get
-            {
-                return _userType;
-            }
-
-            set
-            {
-                _userType = value;
             }
         }
 

@@ -10,9 +10,9 @@ namespace Clasification
     {
         public List <Product> _products = new List<Product>();
         public List <User> _users = new List<User>();
+        public List <Order> _orders = new List<Order>();
 
-
-    public List<Product> SearchProduct(string parameter)
+        public List<Product> SearchProduct(string parameter)
         {
             return _products.Where(x => x.ProductName.Contains(parameter)).ToList();
         }
@@ -34,12 +34,28 @@ namespace Clasification
 
         public Product GetProduct(int id)
         {
-            return _products.FirstOrDefault(x => x.ProductID == id);
+            try
+            {
+                return _products.Single(x => x.ProductID == id);
+            }
+           catch(Exception)
+            {
+                Console.WriteLine("ProductID not unical");
+                throw;
+            }
         }
 
         public User GetUser(int id)
         {
-            return _users.FirstOrDefault(x => x.UserID == id);
+            try
+            {
+                return _users.Single(x => x.UserID == id);
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("UserID not unical");
+                throw;
+            }
         }
 
         public List<Product> GetAllProducts()
@@ -52,6 +68,11 @@ namespace Clasification
             return _users;
         }
 
+        public List<Order> GetAllOrders(int id)
+        {
+            return _orders.Where(x => x.UserID == id).OrderBy(x => x.OrderID).ToList();
+        }
+
         public void RemoveProduct(int id)
         {
             _products = _products.Where(x => x.ProductID != id).ToList();
@@ -60,6 +81,10 @@ namespace Clasification
         public void RemoveUser(int id)
         {
             _users = _users.Where(x => x.UserID != id).ToList();
+        }
+        public void RemoveOrder(int id)
+        {
+            _orders = _orders.Where(x => x.OrderID != id).ToList();
         }
     }
 }

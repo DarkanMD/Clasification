@@ -8,14 +8,18 @@ namespace Clasification
     public class Product
     {
         private int _productID;
-        private string _productDescription="";
-        private string _productImageFileName="";
         private decimal _productPrice;
+        private int _stock;
         private string _productName="";
         private string _productType="";
+        private bool _visible = false;
 
-        public Product()
+        public Product(int id, string name, decimal price, string type)
         {
+            _productID = id;
+            _productName = name;
+            _productPrice = price;
+            _productType = type;
 
                 
         }
@@ -45,32 +49,6 @@ namespace Clasification
             }
         }
 
-        public string ProductDescription
-        {
-            get
-            {
-                return _productDescription;
-            }
-
-            set
-            {
-                _productDescription = value;
-            }
-        }
-
-        public string ProductImageFileName
-        {
-            get
-            {
-                return _productImageFileName;
-            }
-
-            set
-            {
-                _productImageFileName = value;
-            }
-        }
-
         public decimal ProductPrice
         {
             get
@@ -84,13 +62,35 @@ namespace Clasification
             }
         }
 
-        public void Display()
+        public int Stock
         {
-            throw new System.NotImplementedException();
+            get
+            {
+                return _stock;
+            }
+
+            set
+            {
+                _stock = value;
+            }
         }
+
+        public string ProductType
+        {
+            get
+            {
+                return _productType;
+            }
+
+            set
+            {
+                _productType = value;
+            }
+        }
+
         public override string ToString()
         {
-            return "Name= " + ProductName + " ID = " + ProductID;
+            return "ProductName = " + ProductName + ", ID = " + ProductID;
         }
     }
 }

@@ -43,11 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="account.cs" />
     <Compile Include="Administrator.cs" />
-    <Compile Include="Catalog.cs" />
     <Compile Include="PagedResult.cs" />
-    <Compile Include="IAdministrable.cs" />
     <Compile Include="IProductRepository.cs" />
     <Compile Include="IRepository.cs" />
     <Compile Include="RegistredUser.cs" />
