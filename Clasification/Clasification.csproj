@@ -48,10 +48,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AbstractFactory.cs" />
     <Compile Include="Administrator.cs" />
+    <Compile Include="ISeriazibleDeseriazible.cs" />
+    <Compile Include="Serializer.cs" />
+    <Compile Include="TextRepository.cs" />
+    <Compile Include="TXTReader.cs" />
     <Compile Include="PagedResult.cs" />
-    <Compile Include="IProductRepository.cs" />
     <Compile Include="IRepository.cs" />
+    <Compile Include="ProductMapper.cs" />
     <Compile Include="RegistredUser.cs" />
     <Compile Include="CartProduct.cs" />
     <Compile Include="MyRepository.cs" />

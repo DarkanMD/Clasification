@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace Clasification
 {
-    interface IProductRepository:IRepository<Product, string>
+    abstract class AbstractFactory
     {
-            IEnumerable<Product> FindAll();
-            IEnumerable<Product> Find(string text);
+        public abstract Product CreatProduct();
     }
 }

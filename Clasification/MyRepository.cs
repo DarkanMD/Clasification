@@ -3,6 +3,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Newtonsoft.Json;
+using System.IO;
 
 namespace Clasification
 {
@@ -11,6 +13,9 @@ namespace Clasification
         public List <Product> _products = new List<Product>();
         public List <User> _users = new List<User>();
         public List <Order> _orders = new List<Order>();
+
+        TXTReaderWriter txtHandler = new TXTReaderWriter();
+        Serializer json = new Serializer();
 
         public List<Product> SearchProduct(string parameter)
         {
@@ -60,17 +65,17 @@ namespace Clasification
 
         public List<Product> GetAllProducts()
         {
-            return _products;
+            return json.DeserializeProducts(txtHandler.Read("_products"));
         }
 
         public List<User> GetAllUsers()
         {
-            return _users;
+            return json.DeserializeUsers(txtHandler.Read("_users"));
         }
 
         public List<Order> GetAllOrders(int id)
         {
-            return _orders.Where(x => x.UserID == id).OrderBy(x => x.OrderID).ToList();
+            return json.DeserializeOrders(txtHandler.Read("_orders"));
         }
 
         public void RemoveProduct(int id)
@@ -85,6 +90,15 @@ namespace Clasification
         public void RemoveOrder(int id)
         {
             _orders = _orders.Where(x => x.OrderID != id).ToList();
+        }
+
+        public void Save()
+        {
+            txtHandler.Write("_products",json.Serialize(_products));
+
+            txtHandler.Write("_users",json.Serialize(_users));
+
+            txtHandler.Write("_orders",json.Serialize(_orders));
         }
     }
 }

@@ -93,5 +93,10 @@ namespace Clasification
         {
             throw new System.NotImplementedException();
         }
+
+        public override string ToString()
+        {
+            return $"ID: {UserID} Name: {UserName} Address: {UserAddres} e-mail: {UserEmail} ";
+        }
     }
 }
