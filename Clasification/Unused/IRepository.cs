@@ -11,7 +11,7 @@ namespace Clasification
     {
         List<T> GetAll();
 
-        T Get(Func<T, bool> expression);
+        List<T> Get(Func<T, bool> expression);
 
         void Add(T entity);
 

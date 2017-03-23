@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Clasification
 {
-    interface ISeriazibleDeseriazible
+    interface ISeriazibleDeseriazible<T> where T : class
     {
-         string Deserialize();
-         void Serialize();
+         T  Deserialize(string input);
+         string Serialize(T entity);
     }
 }

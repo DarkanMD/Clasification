@@ -50,16 +50,19 @@
   <ItemGroup>
     <Compile Include="AbstractFactory.cs" />
     <Compile Include="Administrator.cs" />
+    <Compile Include="Factory.cs" />
+    <Compile Include="Unused\IReadWrite.cs" />
     <Compile Include="ISeriazibleDeseriazible.cs" />
-    <Compile Include="Serializer.cs" />
+    <Compile Include="SerializeDeserialize.cs" />
+    <Compile Include="Unused\Serializer.cs" />
     <Compile Include="TextRepository.cs" />
-    <Compile Include="TXTReader.cs" />
+    <Compile Include="Unused\TXTReaderWriter.cs" />
     <Compile Include="PagedResult.cs" />
-    <Compile Include="IRepository.cs" />
+    <Compile Include="Unused\IRepository.cs" />
     <Compile Include="ProductMapper.cs" />
-    <Compile Include="RegistredUser.cs" />
+    <Compile Include="Unused\RegistredUser.cs" />
     <Compile Include="CartProduct.cs" />
-    <Compile Include="MyRepository.cs" />
+    <Compile Include="Unused\MyRepository.cs" />
     <Compile Include="Order.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="Program.cs" />

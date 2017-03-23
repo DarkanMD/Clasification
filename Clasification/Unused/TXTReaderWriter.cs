@@ -7,13 +7,12 @@ using System.IO;
 
 namespace Clasification
 {
-    class TXTReaderWriter
+    class TXTReaderWriter : IReadWrite
     {
 
         public string Read(string type)
         {
             string path = $"d:\\{type}.txt";
-
                 try
             {
                 using (StreamReader myReader = new StreamReader(path))
@@ -30,7 +29,7 @@ namespace Clasification
         }
 
 
-        public void Write(string type, string data)
+        public void Write(string data,string type)
         {
             string path = $"d:\\{type}.txt";
             using (StreamWriter myWriter = new StreamWriter(path))
