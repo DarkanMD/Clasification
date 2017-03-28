@@ -50,6 +50,7 @@ namespace Clasification
 
         }
 
+        public string Type { get; set; }/* = ;typeof(this).ToString();*/
         public int ProductID
         {
             get
