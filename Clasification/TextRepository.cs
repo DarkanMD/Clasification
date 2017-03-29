@@ -8,21 +8,20 @@ using System.Threading.Tasks;
 
 namespace Clasification
 {
-    class TextRepository<T> /*: IRepository<T>*/ where T: class
+    class TextRepository<T> /*: IRepository<T>*/ where T : class
     {
         static string path = "d:\\mydata.txt";
-
-        ISeriazibleDeseriazible<T> json;
-        public TextRepository(ISeriazibleDeseriazible<T> serial)
+        IFactory<T> _factory;
+        public TextRepository(IFactory<T> factory)
         {
-            json = serial;
+            _factory = factory;
         }
 
         public void Add(T entity)
         {
             using (StreamWriter writer = new StreamWriter(new FileStream(path, FileMode.Append, FileAccess.Write)))
             {
-                writer.WriteLine($"{typeof(T)}  {json.Serialize(entity)}");
+                writer.WriteLine($"{typeof(T).Name};{entity.ToString()}");
             }
         }
 
@@ -32,7 +31,7 @@ namespace Clasification
             {
                 foreach (var item in entity)
                 {
-                    writer.WriteLine($"{typeof(T)} {json.Serialize(item)}");
+                    writer.WriteLine($"{typeof(T).Name};{item.ToString()}");
                 }
             }
         }
@@ -41,7 +40,7 @@ namespace Clasification
         {
             List<string> result = new List<string>();
             string line = "";
-            string lineToDelete = $"{typeof(T)} {json.Serialize(entity)}";
+            string lineToDelete = $"{typeof(T).Name};{entity.ToString()}";
             using (StreamReader reader = new StreamReader(path))
             {
                 while ((line = reader.ReadLine()) != null)
@@ -67,9 +66,9 @@ namespace Clasification
             {
                 while ((line = reader.ReadLine()) != null)
                 {
-                    if (line.Contains(typeof(T).ToString()))
+                    if (line.Contains(typeof(T).Name.ToString()))
                     {
-                        result.Add(json.Deserialize(line.Replace(typeof(T).ToString(), "")));
+                            result.Add(_factory.Create(line));
                     }
                 }
             }
@@ -84,9 +83,9 @@ namespace Clasification
             {
                 while ((line = reader.ReadLine()) != null)
                 {
-                    if (line.Contains(typeof(T).ToString()))
+                    if (line.Contains(typeof(T).Name.ToString()))
                     {
-                        result.Add(json.Deserialize(line.Replace(typeof(T).ToString(), "")));
+                        result.Add(_factory.Create(line));
                     }
                 }
             }

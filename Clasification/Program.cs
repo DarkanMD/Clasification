@@ -14,30 +14,31 @@ namespace Clasification
     {
         static void Main(string[] args)
         {
-            MyRepository db = new MyRepository();
-            User u = new User(1, "Ion");
-            User u1 = new User(2, "Vasea");
-            User u2 = new User(3, "Oleg");
-            User u3 = new User(4, "Dan");
-            User u4 = new User(5, "Eugen");
+            //var myguid = Guid.NewGuid();
+            //MyRepository db = new MyRepository();
+            User u = new User("Ion");
+            User u1 = new User("Vasea");
+            User u2 = new User("Oleg");
+            User u3 = new User("Dan");
+            User u4 = new User("Eugen");
 
-            Product p = new Product(1, "Camera 2Mpx", "Camera", 120, 10,true);
-            Product p1 = new Product(2, "PTZ 2Mpx", "PTZ", 400, 3, true);
-            Product p2 = new Product(3, "Camera 4Mpx", "Camera", 190, 15, true);
-            Product p3 = new Product(4, "PTZ 4Mpx", "PTZ", 500, 2, true);
-            Product p4 = new Product(5, "Spy CAM 2Mpx", "SPY", 250, 5, true);
+            Product p = new Product( "Camera 2Mpx","Camera", "Camera", 120, 10,true);
+            Product p1 = new Product( "PTZ 2Mpx", "Camera", "PTZ", 400, 3, true);
+            Product p2 = new Product( "Camera 4Mpx", "Camera", "Camera", 190, 15, true);
+            Product p3 = new Product( "PTZ 4Mpx", "Camera", "PTZ", 500, 2, true);
+            Product p4 = new Product( "Spy CAM 2Mpx", "Camera", "SPY", 250, 5, true);
 
-            TextRepository<Product> products = new TextRepository<Product>(new SerializeDeserialize<Product>());
-            TextRepository<User> users = new TextRepository<User>(new SerializeDeserialize<User>());
+            TextRepository<Product> products = new TextRepository<Product>(new ProductFactory());
+            TextRepository<User> users = new TextRepository<User>(new UserFactory());
 
-            users.Add(new List<User> { u, u1, u2, u3, u4 });
-            products.Add(new List<Product> { p, p1, p2, p3, p4 });
+             // users.Add(new List<User> { u, u1, u2, u3, u4 });
+            //  products.Add(new List<Product> { p, p1, p2, p3, p4 });
 
             //users.Add(u);
             //users.Add(u1);
             //users.Add(u2);
 
-            //products.Add(p);
+            // products.Add(p);
             //products.Add(p1);
             //products.Add(p2);
             //products.Add(p3);
@@ -45,11 +46,11 @@ namespace Clasification
 
             //products.Delete(p);
             //products.Add(Factory.Create());
-            var qwery = products.Get(x=>x.ProductCategory.Contains("PTZ"));
-
+            var qwery = products.Get(x => x.ProductCategory.Contains("Camera"));
+            Console.WriteLine($"{"Name",-15} {"Price",-10} {"In stock",-20}");
             foreach (var item in qwery)
             {
-                Console.WriteLine(item.ToString());
+                Console.WriteLine($"{item.ProductName,-15} {item.ProductPrice,-10} {item.ProductStock,-20}" );
             }
             var qwery2 = users.GetAll();
 

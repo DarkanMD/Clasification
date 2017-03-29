@@ -37,7 +37,7 @@ namespace Clasification
             _users.Add(user);
         }
 
-        public Product GetProduct(int id)
+        public Product GetProduct(Guid id)
         {
             try
             {
@@ -50,7 +50,7 @@ namespace Clasification
             }
         }
 
-        public User GetUser(int id)
+        public User GetUser(Guid id)
         {
             try
             {
@@ -78,12 +78,12 @@ namespace Clasification
             return json.DeserializeOrders(txtHandler.Read("_orders"));
         }
 
-        public void RemoveProduct(int id)
+        public void RemoveProduct(Guid id)
         {
             _products = _products.Where(x => x.ProductID != id).ToList();
         }
 
-        public void RemoveUser(int id)
+        public void RemoveUser(Guid id)
         {
             _users = _users.Where(x => x.UserID != id).ToList();
         }

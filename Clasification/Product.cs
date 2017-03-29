@@ -9,15 +9,15 @@ namespace Clasification
 {
     public class Product
     {
-        private int _productID;
-        private decimal _productPrice;
-        private int _stock;
-        private string _productName="";
-        private bool _visible = false;
-        public Product()
-        {
+        //private Guid _productID;
+        //private decimal _productPrice;
+        //private int _stock;
+        //private string _productName="";
+        //private bool _visible = false;
+        //public Product()
+        //{
 
-        }
+        //}
     //    public Product(int id, decimal price,int stock,string name,bool visible)
     //    {
     //        _productID = id;
@@ -27,78 +27,50 @@ namespace Clasification
     //        _visible = visible;
 
     //}
-        public Product(int id,string name, string category, decimal price,int stock,bool visible)
+        public Product(string name, string type, string category, decimal price, int stock,bool visible)
         {
-            ProductID = id;
+            ProductID = Guid.NewGuid();
             ProductName = name;
+            ProductType = type;
             ProductCategory = category;
             ProductPrice = price;
-            Stock = stock;
-            Visible = visible;
+            ProductStock = stock;
+            ProductVisible = visible;
 
         }
-        public string ProductName
+        public Product(Guid guid,string name,string type, string category, decimal price, int stock, bool visible)
         {
-            get
-            {
-                return _productName;
-            }
-            set
-            {
-                _productName = value;
-            }
+            ProductID = guid;
+            ProductName = name;
+            ProductType = type;
+            ProductCategory = category;
+            ProductPrice = price;
+            ProductStock = stock;
+            ProductVisible = visible;
 
         }
+        public string ProductName{get; private set;}
 
-        public string Type { get; set; }/* = ;typeof(this).ToString();*/
-        public int ProductID
-        {
-            get
-            {
-                return _productID;
-            }
-             set
-            {
-                _productID = value;
-            }
-        }
+        public string ProductType { get; private set; }
 
-        public decimal ProductPrice
-        {
-            get
-            {
-                return _productPrice;
-            }
-             set
-            {
-                _productPrice = value;
-            }
-        }
+        public Guid ProductID{get; private set;}
 
-        public int Stock
-        {
-            get
-            {
-                return _stock;
-            }
-             set
-            {
-                _stock = value;
-            }
-        }
+        public decimal ProductPrice { get; private set; }
 
-        public bool Visible { get; set; }
+        public int ProductStock { get; private set; }
 
+        public bool ProductVisible { get; private set; }
 
-        public string ProductCategory { get; set; }
+        public string ProductCategory { get; private set; }
+
         public override string ToString()
         {
-            return $"ProdcutID: {ProductID} ProductName: {ProductName}, Category: {ProductCategory} Price: {ProductPrice:C} Stock: {Stock} ";
+            return $"{ProductID};{ProductName};{ProductType};{ProductCategory};{ProductPrice};{ProductStock};{ProductVisible}";
         }
 
-        public string ToSerial()
+        public string ToDB()
         {
-            return ProductName + "," + ProductCategory + "," + ProductPrice + "," + Stock + "," + Visible;
+            return ProductID + ";" + ProductName + ";"+ProductType+";" + ProductCategory + ";" + ProductPrice + ";" + ProductStock + ";"+ ProductVisible;
         }
 
     }

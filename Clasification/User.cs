@@ -7,87 +7,39 @@ namespace Clasification
 {
     public class User
     {
-        private string _userAddres;
-        private string _userEmail;
-        private int _userID;
-        private string _userName;
-        private string _userPassword;
-        private int _role;
 
-        public User(int id, string name)
+
+        public User(Guid id, string name,string addres,string email,string password,byte role)
         {
             UserID = id;
             UserName = name;
+            UserAddress = addres;
+            UserEmailAddress = email;
+            UserPassword = password;
+            UserRole = role;
         }
-        public string UserAddres
+
+        public User(string name)
         {
-            get
-            {
-                return _userAddres;
-            }
-
-            set
-            {
-                _userAddres = value;
-            }
+            UserID = Guid.NewGuid();
+            UserName = name;
+            UserAddress = "Not Specified";
+            UserEmailAddress = "Not Specified";
+            UserPassword = "Not Specified";
+            UserRole = 0;
         }
 
-        public string UserEmail
-        {
-            get
-            {
-                return _userEmail;
-            }
+        public Guid UserID { get; private set; }
 
-            set
-            {
-                _userEmail = value;
-            }
-        }
+        public string UserName { get; private set; }
 
-        public int UserID
-        {
-            get
-            {
-                return _userID;
-            }
+        public string UserAddress { get; private set; }
 
-            set
-            {
-                _userID = value;
-            }
-        }
+        public string UserEmailAddress { get; private set; }
 
-        public string UserName
-        {
-            get
-            {
-                return _userName;
-            }
+        public string UserPassword { get; private set; }
 
-            set
-            {
-                _userName = value;
-            }
-        }
-
-        public string UserPassword
-        {
-            get
-            {
-                return _userPassword;
-            }
-
-            set
-            {
-                _userPassword = value;
-            }
-        }
-
-        public void BanUser()
-        {
-            throw new System.NotImplementedException();
-        }
+        public byte UserRole { get; private set; }
 
         public void UpdateProfile()
         {
@@ -96,7 +48,7 @@ namespace Clasification
 
         public override string ToString()
         {
-            return $"ID: {UserID} Name: {UserName} Address: {UserAddres} e-mail: {UserEmail} ";
+            return $"{UserID};{UserName};{UserAddress};{UserEmailAddress};{UserPassword};{UserRole}";
         }
     }
 }
