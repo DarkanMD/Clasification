@@ -90,7 +90,6 @@ namespace Clasification
         public List<CartProduct> GetAllCartProducts()
         {
             return _cartProducts;
-
         }
 
         public override string ToString()

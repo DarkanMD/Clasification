@@ -3,18 +3,22 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Ninject;
+using System.Reflection;
 
 namespace Clasification
 {
-    class TextRepository<T> /*: IRepository<T>*/ where T : class
+    class TextRepository<T> : IRepository<T> where T : class
     {
         static string path = "d:\\mydata.txt";
         IFactory<T> _factory;
-        public TextRepository(IFactory<T> factory)
+       
+
+
+        public TextRepository()
         {
-            _factory = factory;
+            var kernel = new StandardKernel(Bindings.Instance);
+            _factory = kernel.Get<IFactory<T>>();
         }
 
         public void Add(T entity)
@@ -90,6 +94,34 @@ namespace Clasification
                 }
             }
             return result;
+        }
+
+       // public PagedResult<T> ListOrdersForCustomer(
+       //Guid customerId, int page, int pageSize)
+       // {
+       //     var results = from o in _context.Orders
+       //                   where o.Customer.Id == customerId
+       //                   orderby o.Id
+       //                   select o;
+
+       //     var result = GetPagedResultForQuery(results, page, pageSize);
+       //     return result;
+       // }
+
+        public static PagedResult<T> GetPagedResultForQuery(
+        IEnumerable<T> query, int page, int pageSize)
+        {
+            var result = new PagedResult<T>();
+            result.CurrentPage = page;
+            result.PageSize = pageSize;
+            result.RowCount = query.Count();
+            var pageCount = (double)result.RowCount / pageSize;
+            result.PageCount = (int)Math.Ceiling(pageCount);
+            var skip = (page - 1) * pageSize;
+            result.Results = query.Skip(skip).Take(pageSize).ToList();
+
+            return result;
+
         }
 
         public void Save()

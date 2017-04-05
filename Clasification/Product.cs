@@ -7,7 +7,7 @@ using System.Threading;
 
 namespace Clasification
 {
-    public class Product
+    public class Product : AbstractProduct
     {
         //private Guid _productID;
         //private decimal _productPrice;
@@ -49,19 +49,22 @@ namespace Clasification
             ProductVisible = visible;
 
         }
-        public string ProductName{get; private set;}
+
+        public Guid ProductID { get; private set; }
+
+        public override string ProductName{get; set;}
 
         public string ProductType { get; private set; }
 
-        public Guid ProductID{get; private set;}
-
-        public decimal ProductPrice { get; private set; }
+        public  override decimal ProductPrice { get;  set; }
 
         public int ProductStock { get; private set; }
 
         public bool ProductVisible { get; private set; }
 
         public string ProductCategory { get; private set; }
+
+        public string ProductDescription { get; private set; }
 
         public override string ToString()
         {

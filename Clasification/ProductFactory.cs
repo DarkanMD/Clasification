@@ -10,14 +10,18 @@ namespace Clasification
     {
         public ProductFactory()
         {
-
         }
 
         public Product Create(string data)
         {
             var datasplit = data.Split(';');
             return new Product(Guid.Parse(datasplit[1]),datasplit[2],datasplit[3],datasplit[4],decimal.Parse(datasplit[5]),int.Parse(datasplit[6]),bool.Parse(datasplit[7]));
+        }
 
+        public Product Create(string name, string type, string category, decimal price, int stock, bool visible)
+        {
+            return new Product(Guid.NewGuid(), name, type, category, price, stock, visible);
         }
     }
 }
+                                            

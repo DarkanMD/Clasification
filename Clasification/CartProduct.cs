@@ -5,62 +5,26 @@ using System.Text;
 
 namespace Clasification
 {
-    public class CartProduct
+    public class CartProduct : ICartProduct
     {
-        private int _quantity;
-        private Product _product;
-        private decimal _subtotal;
-        public CartProduct(Product prod, int quant)
+        public CartProduct(AbstractProduct prod, int quantity)
         {
-            _product = prod;
-            _quantity = quant;
-            _subtotal = quant * _product.ProductPrice;
+            Product = prod;
+            Quantity = quantity;
+            Subtotal = quantity * Product.ProductPrice;
            
         }
 
-        public int Quantity
-        {
-            get
-            {
-                return _quantity;
-            }
+        public int Quantity { get; private set; }
 
-            set
-            {
-                _quantity = value;
-            }
-        }
+        public AbstractProduct Product { get;  set; }
 
-        public Product Product
-        {
-            get
-            {
-                return _product;
-            }
+        public decimal Subtotal { get; private set; }
 
-            set
-            {
-                _product = value;
-            }
-        }
-
-        public decimal Subtotal
-        {
-            get
-            {
-                return _subtotal;
-            }
-            set
-            {
-                _subtotal = _quantity * _product.ProductPrice;
-            }
-
-
-        }
 
         public override string ToString()
         {
-            return _product.ToString() + " " + "Quantity = "+Quantity;
+            return $"{Product.ProductName}     {Quantity} pice(s)";
         }
     }
 }

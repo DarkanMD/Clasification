@@ -19,12 +19,12 @@ namespace Clasification
             UserRole = role;
         }
 
-        public User(string name)
+        public User(string name,string address, string email)
         {
             UserID = Guid.NewGuid();
             UserName = name;
-            UserAddress = "Not Specified";
-            UserEmailAddress = "Not Specified";
+            UserAddress = address;
+            UserEmailAddress = email;
             UserPassword = "Not Specified";
             UserRole = 0;
         }

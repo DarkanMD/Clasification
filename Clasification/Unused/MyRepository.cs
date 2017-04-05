@@ -87,7 +87,7 @@ namespace Clasification
         {
             _users = _users.Where(x => x.UserID != id).ToList();
         }
-        public void RemoveOrder(int id)
+        public void RemoveOrder(Guid id)
         {
             _orders = _orders.Where(x => x.OrderID != id).ToList();
         }

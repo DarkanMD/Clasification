@@ -7,75 +7,26 @@ namespace Clasification
 {
     public class Order
     {
-        private int _orderID;
-        private int _userID;
-        private string _orderShippingAdress;
-        private DateTime _orderDueDate;
-        private string _orderShipingDetails;
+        List<ICartProduct> _products = new List<ICartProduct>();
+        IRepository<User> rep;
 
-        public int OrderID
+        public Order(List<ICartProduct> listOfProducts, Guid userID,DateTime dueDate)
         {
-            get
-            {
-                return _orderID;
-            }
+            OrderID = Guid.NewGuid();
+            _products = listOfProducts;
+            UserID = userID;
+            OrderDueDate = DateTime.Now;
+            OrderShippingAddress = rep.Get(x=>x.UserID==userID).FirstOrDefault().UserAddress ;
+            OrderDueDate = dueDate;
 
-            set
-            {
-                _orderID = value;
-            }
         }
+        public Guid OrderID { get; private set; }
 
-        public string OrderShippingAdress
-        {
-            get
-            {
-                return _orderShippingAdress;
-            }
+        public string OrderShippingAddress { get; private set; }
 
-            set
-            {
-                _orderShippingAdress = value;
-            }
-        }
+        public DateTime OrderDueDate { get; private set; }
 
-        public DateTime OrderDueDate
-        {
-            get
-            {
-                return _orderDueDate;
-            }
+        public Guid UserID { get; private set; }
 
-            set
-            {
-                _orderDueDate = value;
-            }
-        }
-
-        public string OrderShipingDetails
-        {
-            get
-            {
-                return _orderShipingDetails;
-            }
-
-            set
-            {
-                _orderShipingDetails = value;
-            }
-        }
-
-        public int UserID
-        {
-            get
-            {
-                return _userID;
-            }
-
-            set
-            {
-                _userID = value;
-            }
-        }
     }
 }

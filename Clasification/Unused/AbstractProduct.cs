@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace Clasification
 {
-    interface IFactory<T> where T:class
+    public abstract class AbstractProduct
     {
-
-         T Create(string data);
-       
+        public abstract string ProductName { get; set; }
+       public abstract decimal ProductPrice { get; set; } 
     }
 }

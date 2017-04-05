@@ -6,18 +6,13 @@ using System.Threading.Tasks;
 
 namespace Clasification
 {
-    public class PagedResult<TEntity>
+    public class PagedResult<T> where T:class
     {
-        IEnumerable<TEntity> _items;
-        int _totalCount;
-
-        public PagedResult(IEnumerable<TEntity> items, int totalCount)
-        {
-            _items = items;
-            _totalCount = totalCount;
-        }
-
-        public IEnumerable<TEntity> Items { get { return _items; } }
-        public int TotalCount { get { return _totalCount; } }
+        public IList<T> Results { get; set; }
+        public int CurrentPage { get; set; }
+        public int PageCount { get; set; }
+        public int PageSize { get; set; }
+        public int RowCount { get; set; }
     }
+
 }
